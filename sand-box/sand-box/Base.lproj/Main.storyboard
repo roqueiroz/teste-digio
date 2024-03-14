@@ -282,7 +282,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="contentView" destination="7Af-1O-aM3" id="b99-bB-qul"/>
                         <outlet property="mainTableView" destination="fYN-v1-8Fm" id="x4k-L5-YQ6"/>
+                        <outlet property="viewLoading" destination="nyV-Fq-Py9" id="bUI-aV-XQY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
