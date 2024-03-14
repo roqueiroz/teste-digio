@@ -16,6 +16,20 @@
 		30F9D3022BA2855B00E0FF7B /* sand_boxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3012BA2855B00E0FF7B /* sand_boxTests.swift */; };
 		30F9D30C2BA2855B00E0FF7B /* sand_boxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D30B2BA2855B00E0FF7B /* sand_boxUITests.swift */; };
 		30F9D30E2BA2855B00E0FF7B /* sand_boxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D30D2BA2855B00E0FF7B /* sand_boxUITestsLaunchTests.swift */; };
+		30F9D3252BA3321D00E0FF7B /* SpotlightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3242BA3321D00E0FF7B /* SpotlightCollectionViewCell.swift */; };
+		30F9D3262BA3321D00E0FF7B /* SpotlightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3242BA3321D00E0FF7B /* SpotlightCollectionViewCell.swift */; };
+		30F9D3282BA3323500E0FF7B /* SpotlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3272BA3323500E0FF7B /* SpotlightTableViewCell.swift */; };
+		30F9D3292BA3323500E0FF7B /* SpotlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3272BA3323500E0FF7B /* SpotlightTableViewCell.swift */; };
+		30F9D32C2BA3336700E0FF7B /* SpotlightMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D32B2BA3336700E0FF7B /* SpotlightMock.swift */; };
+		30F9D32D2BA3336700E0FF7B /* SpotlightMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D32B2BA3336700E0FF7B /* SpotlightMock.swift */; };
+		30F9D32F2BA3478B00E0FF7B /* CashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D32E2BA3478B00E0FF7B /* CashTableViewCell.swift */; };
+		30F9D3302BA3478B00E0FF7B /* CashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D32E2BA3478B00E0FF7B /* CashTableViewCell.swift */; };
+		30F9D3322BA36BAF00E0FF7B /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3312BA36BAF00E0FF7B /* ProductsTableViewCell.swift */; };
+		30F9D3332BA36BAF00E0FF7B /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3312BA36BAF00E0FF7B /* ProductsTableViewCell.swift */; };
+		30F9D3352BA36CEB00E0FF7B /* ProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3342BA36CEB00E0FF7B /* ProductsCollectionViewCell.swift */; };
+		30F9D3362BA36CEB00E0FF7B /* ProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3342BA36CEB00E0FF7B /* ProductsCollectionViewCell.swift */; };
+		30F9D3392BA3769D00E0FF7B /* Extension+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3382BA3769D00E0FF7B /* Extension+UIImageView.swift */; };
+		30F9D33A2BA3769D00E0FF7B /* Extension+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3382BA3769D00E0FF7B /* Extension+UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +63,13 @@
 		30F9D3072BA2855B00E0FF7B /* sand-boxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sand-boxUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F9D30B2BA2855B00E0FF7B /* sand_boxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sand_boxUITests.swift; sourceTree = "<group>"; };
 		30F9D30D2BA2855B00E0FF7B /* sand_boxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sand_boxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		30F9D3242BA3321D00E0FF7B /* SpotlightCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightCollectionViewCell.swift; sourceTree = "<group>"; };
+		30F9D3272BA3323500E0FF7B /* SpotlightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightTableViewCell.swift; sourceTree = "<group>"; };
+		30F9D32B2BA3336700E0FF7B /* SpotlightMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightMock.swift; sourceTree = "<group>"; };
+		30F9D32E2BA3478B00E0FF7B /* CashTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashTableViewCell.swift; sourceTree = "<group>"; };
+		30F9D3312BA36BAF00E0FF7B /* ProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewCell.swift; sourceTree = "<group>"; };
+		30F9D3342BA36CEB00E0FF7B /* ProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewCell.swift; sourceTree = "<group>"; };
+		30F9D3382BA3769D00E0FF7B /* Extension+UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImageView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +120,9 @@
 		30F9D2E92BA2855A00E0FF7B /* sand-box */ = {
 			isa = PBXGroup;
 			children = (
+				30F9D3372BA3768800E0FF7B /* Extension */,
+				30F9D32A2BA3335800E0FF7B /* Mock */,
+				30F9D31A2BA323FD00E0FF7B /* Cells */,
 				30F9D2EA2BA2855A00E0FF7B /* AppDelegate.swift */,
 				30F9D2EC2BA2855A00E0FF7B /* SceneDelegate.swift */,
 				30F9D2EE2BA2855A00E0FF7B /* ViewController.swift */,
@@ -125,6 +149,58 @@
 				30F9D30D2BA2855B00E0FF7B /* sand_boxUITestsLaunchTests.swift */,
 			);
 			path = "sand-boxUITests";
+			sourceTree = "<group>";
+		};
+		30F9D31A2BA323FD00E0FF7B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				30F9D31D2BA3242A00E0FF7B /* Cash */,
+				30F9D31C2BA3242000E0FF7B /* Products */,
+				30F9D31B2BA3241100E0FF7B /* Spotlight */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		30F9D31B2BA3241100E0FF7B /* Spotlight */ = {
+			isa = PBXGroup;
+			children = (
+				30F9D3242BA3321D00E0FF7B /* SpotlightCollectionViewCell.swift */,
+				30F9D3272BA3323500E0FF7B /* SpotlightTableViewCell.swift */,
+			);
+			path = Spotlight;
+			sourceTree = "<group>";
+		};
+		30F9D31C2BA3242000E0FF7B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30F9D3312BA36BAF00E0FF7B /* ProductsTableViewCell.swift */,
+				30F9D3342BA36CEB00E0FF7B /* ProductsCollectionViewCell.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		30F9D31D2BA3242A00E0FF7B /* Cash */ = {
+			isa = PBXGroup;
+			children = (
+				30F9D32E2BA3478B00E0FF7B /* CashTableViewCell.swift */,
+			);
+			path = Cash;
+			sourceTree = "<group>";
+		};
+		30F9D32A2BA3335800E0FF7B /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				30F9D32B2BA3336700E0FF7B /* SpotlightMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		30F9D3372BA3768800E0FF7B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				30F9D3382BA3769D00E0FF7B /* Extension+UIImageView.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +335,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				30F9D2EF2BA2855A00E0FF7B /* ViewController.swift in Sources */,
+				30F9D3282BA3323500E0FF7B /* SpotlightTableViewCell.swift in Sources */,
+				30F9D3392BA3769D00E0FF7B /* Extension+UIImageView.swift in Sources */,
 				30F9D2EB2BA2855A00E0FF7B /* AppDelegate.swift in Sources */,
+				30F9D3352BA36CEB00E0FF7B /* ProductsCollectionViewCell.swift in Sources */,
+				30F9D32F2BA3478B00E0FF7B /* CashTableViewCell.swift in Sources */,
 				30F9D2ED2BA2855A00E0FF7B /* SceneDelegate.swift in Sources */,
+				30F9D3322BA36BAF00E0FF7B /* ProductsTableViewCell.swift in Sources */,
+				30F9D32C2BA3336700E0FF7B /* SpotlightMock.swift in Sources */,
+				30F9D3252BA3321D00E0FF7B /* SpotlightCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +351,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30F9D3362BA36CEB00E0FF7B /* ProductsCollectionViewCell.swift in Sources */,
+				30F9D3292BA3323500E0FF7B /* SpotlightTableViewCell.swift in Sources */,
+				30F9D33A2BA3769D00E0FF7B /* Extension+UIImageView.swift in Sources */,
 				30F9D3022BA2855B00E0FF7B /* sand_boxTests.swift in Sources */,
+				30F9D3302BA3478B00E0FF7B /* CashTableViewCell.swift in Sources */,
+				30F9D3332BA36BAF00E0FF7B /* ProductsTableViewCell.swift in Sources */,
+				30F9D32D2BA3336700E0FF7B /* SpotlightMock.swift in Sources */,
+				30F9D3262BA3321D00E0FF7B /* SpotlightCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
