@@ -18,8 +18,6 @@
 		30F9D32D2BA3336700E0FF7B /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D32B2BA3336700E0FF7B /* Models.swift */; };
 		30F9D3392BA3769D00E0FF7B /* Extension+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3382BA3769D00E0FF7B /* Extension+UIImageView.swift */; };
 		30F9D33A2BA3769D00E0FF7B /* Extension+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3382BA3769D00E0FF7B /* Extension+UIImageView.swift */; };
-		30F9D33D2BA37F8B00E0FF7B /* SandboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D33C2BA37F8B00E0FF7B /* SandboxService.swift */; };
-		30F9D33E2BA37F8B00E0FF7B /* SandboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D33C2BA37F8B00E0FF7B /* SandboxService.swift */; };
 		30F9D3412BA3804100E0FF7B /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3402BA3804100E0FF7B /* ApiManager.swift */; };
 		30F9D3422BA3804100E0FF7B /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3402BA3804100E0FF7B /* ApiManager.swift */; };
 		30F9D3452BA3C83900E0FF7B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3442BA3C83900E0FF7B /* HomeViewController.swift */; };
@@ -46,6 +44,8 @@
 		30F9D36D2BA4CA4900E0FF7B /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D36B2BA4CA4900E0FF7B /* Extension+UIView.swift */; };
 		30F9D36F2BA4CAC500E0FF7B /* Extension+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D36E2BA4CAC500E0FF7B /* Extension+NSLayoutConstraint.swift */; };
 		30F9D3702BA4CAC500E0FF7B /* Extension+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D36E2BA4CAC500E0FF7B /* Extension+NSLayoutConstraint.swift */; };
+		30F9D3722BA4D27200E0FF7B /* ErroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3712BA4D27200E0FF7B /* ErroView.swift */; };
+		30F9D3732BA4D27200E0FF7B /* ErroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3712BA4D27200E0FF7B /* ErroView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +79,6 @@
 		30F9D30D2BA2855B00E0FF7B /* sand_boxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sand_boxUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		30F9D32B2BA3336700E0FF7B /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		30F9D3382BA3769D00E0FF7B /* Extension+UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImageView.swift"; sourceTree = "<group>"; };
-		30F9D33C2BA37F8B00E0FF7B /* SandboxService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandboxService.swift; sourceTree = "<group>"; };
 		30F9D3402BA3804100E0FF7B /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		30F9D3442BA3C83900E0FF7B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		30F9D3472BA3C85C00E0FF7B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -93,6 +92,7 @@
 		30F9D3672BA4BC6E00E0FF7B /* ProductsCollectionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionCellViewModel.swift; sourceTree = "<group>"; };
 		30F9D36B2BA4CA4900E0FF7B /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 		30F9D36E2BA4CAC500E0FF7B /* Extension+NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NSLayoutConstraint.swift"; sourceTree = "<group>"; };
+		30F9D3712BA4D27200E0FF7B /* ErroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErroView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,7 +187,6 @@
 			children = (
 				30F9D36A2BA4C9D000E0FF7B /* Models */,
 				30F9D33F2BA3802D00E0FF7B /* API */,
-				30F9D33C2BA37F8B00E0FF7B /* SandboxService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -218,6 +217,7 @@
 				30F9D35B2BA4960D00E0FF7B /* DataSource */,
 				30F9D34E2BA3E5B600E0FF7B /* BaseView.swift */,
 				30F9D3512BA3E65500E0FF7B /* BaseScrollViewController.swift */,
+				30F9D3712BA4D27200E0FF7B /* ErroView.swift */,
 			);
 			path = Essencials;
 			sourceTree = "<group>";
@@ -395,11 +395,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30F9D3722BA4D27200E0FF7B /* ErroView.swift in Sources */,
 				30F9D3482BA3C85C00E0FF7B /* HomeView.swift in Sources */,
 				30F9D36C2BA4CA4900E0FF7B /* Extension+UIView.swift in Sources */,
 				30F9D3522BA3E65500E0FF7B /* BaseScrollViewController.swift in Sources */,
 				30F9D3602BA4982600E0FF7B /* HomeViewModel.swift in Sources */,
-				30F9D33D2BA37F8B00E0FF7B /* SandboxService.swift in Sources */,
 				30F9D3392BA3769D00E0FF7B /* Extension+UIImageView.swift in Sources */,
 				30F9D35D2BA4962000E0FF7B /* CollectionViewDataSource.swift in Sources */,
 				30F9D3412BA3804100E0FF7B /* ApiManager.swift in Sources */,
@@ -422,6 +422,7 @@
 			files = (
 				30F9D3662BA4BAC600E0FF7B /* ProductsCollectionCellView.swift in Sources */,
 				30F9D3612BA4982600E0FF7B /* HomeViewModel.swift in Sources */,
+				30F9D3732BA4D27200E0FF7B /* ErroView.swift in Sources */,
 				30F9D36D2BA4CA4900E0FF7B /* Extension+UIView.swift in Sources */,
 				30F9D35E2BA4962000E0FF7B /* CollectionViewDataSource.swift in Sources */,
 				30F9D3502BA3E5B600E0FF7B /* BaseView.swift in Sources */,
@@ -436,7 +437,6 @@
 				30F9D3462BA3C83900E0FF7B /* HomeViewController.swift in Sources */,
 				30F9D32D2BA3336700E0FF7B /* Models.swift in Sources */,
 				30F9D3492BA3C85C00E0FF7B /* HomeView.swift in Sources */,
-				30F9D33E2BA37F8B00E0FF7B /* SandboxService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

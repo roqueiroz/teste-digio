@@ -10,20 +10,40 @@ import Foundation
 protocol HomeViewModelProtocol: AnyObject {
   var spotlightCollectionDataSource: CollectionViewDataSource<SpotlightCollectionCellViewModel> { get }
   var productsCollectionDataSource: CollectionViewDataSource<ProductsCollectionCellViewModel> { get }
+  var cash: Cash? { get }
   
-  func fetchProducts()
+  func fetchProducts(completion: @escaping (Result<Void, Error>) -> Void)
 }
 
 class HomeViewModel {
   let spotlightCollectionDataSource: CollectionViewDataSource<SpotlightCollectionCellViewModel> = .make(for: [])
   let productsCollectionDataSource: CollectionViewDataSource<ProductsCollectionCellViewModel> = .make(for: [])
-  
+  var cash: Cash?
 }
 
 extension HomeViewModel: HomeViewModelProtocol {
-  func fetchProducts() {
-    
+  func fetchProducts(completion: @escaping (Result<Void, Error>) -> Void) {
+    APIManager.shared.fetchData { [weak self] result in
+      guard let self else { return }
+      switch result {
+        case let .success(model):
+          spotlightCollectionDataSource.models = model.spotlights.map { spotlight in
+            SpotlightCollectionCellViewModel(spotlight)
+          }
+          productsCollectionDataSource.models = model.products.map({ product in
+            ProductsCollectionCellViewModel(product: product)
+          })
+          cash = model.cash
+          
+          completion(.success(()))
+        case let .failure(error):
+          completion(.failure(error))
+          break
+      }
+    }
   }
+  
+//  func get
 }
 
 extension CollectionViewDataSource where Model == SpotlightCollectionCellViewModel {

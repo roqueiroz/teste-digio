@@ -9,8 +9,21 @@ import UIKit
 
 final class HomeView: BaseScrollView {
   
-  let containerView = UIView()
-  let headerView = UIView()
+  private let containerView = UIView()
+  private let headerView = UIView()
+  private let viewLoader: UIView = {
+    let view = UIView(frame: .zero)
+    view.backgroundColor = .white
+    view.isHidden = true
+    return view
+  }()
+  
+  private lazy var spinner: UIActivityIndicatorView = {
+    let activityView = UIActivityIndicatorView(style: .large)
+    activityView.center = viewLoader.center
+    activityView.color = UIColor(named: "main")
+    return activityView
+  }()
   
   private let profileImageView: UIImageView = {
     let imageView = UIImageView()
@@ -87,6 +100,7 @@ final class HomeView: BaseScrollView {
   
   override func installConstraints() {
     containerView.anchorEqualTo(view: contentView)
+    viewLoader.anchorEqualTo(view: contentView)
     installContraintsHeaderView()
   }
 }
@@ -111,8 +125,9 @@ private extension HomeView {
                                cashView,
                                productsView],
                               enableConstraints: true)
-    
-    contentView.addSubview(containerView,
+    viewLoader.addSubview(spinner, enableConstraints: true)
+    contentView.addSubviews([containerView,
+                           viewLoader],
                            enableConstraints: true)
   }
   
@@ -168,11 +183,24 @@ private extension HomeView {
       productsCollectionView.trailingAnchor.constraint(equalTo: productsView.trailingAnchor),
       productsCollectionView.heightAnchor.constraint(equalToConstant: 140),
       
+      spinner.centerXAnchor.constraint(equalTo: viewLoader.centerXAnchor),
+      spinner.centerYAnchor.constraint(equalTo: viewLoader.centerYAnchor)
+      
     ])
   }
 }
 
 extension HomeView {
+  func showLoader(_ show: Bool) {
+    containerView.isHidden = show
+    viewLoader.isHidden = !show
+    if show {
+      spinner.startAnimating()
+    } else {
+      spinner.stopAnimating()
+    }
+  }
+  
   func setCashTitle(_ title: String) {
     let att1 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 22),
                 NSAttributedString.Key.foregroundColor : UIColor(named: "main")]

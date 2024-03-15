@@ -7,9 +7,6 @@
 
 import UIKit
 
-let images = ["https://s3-sa-east-1.amazonaws.com/digio-exame/recharge_banner.png",
-              "https://s3-sa-east-1.amazonaws.com/digio-exame/uber_banner.png"]
-
 final class HomeViewController: BaseScrollViewController<HomeView> {
   let viewModel: HomeViewModelProtocol
   
@@ -20,6 +17,7 @@ final class HomeViewController: BaseScrollViewController<HomeView> {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -27,41 +25,48 @@ final class HomeViewController: BaseScrollViewController<HomeView> {
     fetchProducts()
     setupBinds()
   }
-  
 }
 
 private extension HomeViewController {
   func fetchProducts() {
-    viewModel.spotlightCollectionDataSource.models = [
-      .init(.init(name: "Recarga",
-                  bannerURL: "https://s3-sa-east-1.amazonaws.com/digio-exame/recharge_banner.png",
-                  description: "Agora ficou mais fácil colocar créditos no seu celular! A digio Store traz a facilidade de fazer recargas... direto pelo seu aplicativo, com toda segurança e praticidade que você procura.")),
-      .init(.init(name: "Uber",
-                  bannerURL: "https://s3-sa-east-1.amazonaws.com/digio-exame/uber_banner.png",
-                  description: "Dê um vale presente Uber para amigos e familiares, ou use os vales para adicionar créditos à sua conta. O app Uber conecta você a uma viagem confiável em apenas alguns minutos. Você pode escolher entre as opções econômicas ou Premium para viajar do seu jeito. O pagamento é fácil e sem complicações!"))]
+    baseView.showLoader(true)
     
-    viewModel.productsCollectionDataSource.models = [
-      .init(product: .init(name: "XBOX",
-                           imageURL: "https://s3-sa-east-1.amazonaws.com/digio-exame/xbox_icon.png",
-                           description: "")),
-      .init(product: .init(name: "Google Play",
-                           imageURL: "https://s3-sa-east-1.amazonaws.com/digio-exame/google_play_icon.png",
-                           description: "")),
-      .init(product: .init(name: "Level up",
-                           imageURL: "https://cdn-icons-png.flaticon.com/512/6708/6708069.png",
-                           description: ""))
-    ]
+    viewModel.fetchProducts { [weak self] result in
+      guard let self else { return }
+      DispatchQueue.main.async {
+        self.baseView.showLoader(false)
+        switch result {
+          case .success:
+            self.baseView.spotlightCollectionView.reloadData()
+            self.baseView.productsCollectionView.reloadData()
+            self.baseView.setCashTitle(self.viewModel.cash?.title ?? "")
+            self.baseView.setCashBanner(self.viewModel.cash?.bannerURL ?? "")
+            self.showContentView(true)
+          case .failure(_):
+            self.showContentView(false)
+            self.showError()
+        }
+      }
+    }
+  }
+  
+  func showError() {
+    ErroView.show(error: "Ops..\n Algo deu errado!", in: self, action: .retry) { [weak self] in
+      guard let self else { return }
+      self.fetchProducts()
+    }
+  }
+  
+  func showContentView(_ show: Bool) {
+    baseView.showLoader(false)
+    baseView.scrollView.isHidden = !show
   }
   
   func setupBinds() {
     self.baseView.spotlightCollectionView.dataSource = viewModel.spotlightCollectionDataSource
     self.baseView.spotlightCollectionView.delegate = self
-    self.baseView.setCashTitle("digio Cash")
-    self.baseView.setCashBanner("https://s3-sa-east-1.amazonaws.com/digio-exame/cash_banner.png")
-    
     self.baseView.productsCollectionView.dataSource = viewModel.productsCollectionDataSource
     self.baseView.productsCollectionView.delegate = self
-    
   }
 }
 
