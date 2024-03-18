@@ -5,20 +5,29 @@
 //  Created by Rodrigo Queiroz on 15/03/24.
 //
 
-import Foundation
+import UIKit
+
+protocol HomeViewModelDelegate {
+  func openDetail(_ detailModel: DetailModel)
+}
 
 protocol HomeViewModelProtocol: AnyObject {
   var spotlightCollectionDataSource: CollectionViewDataSource<SpotlightCollectionCellViewModel> { get }
   var productsCollectionDataSource: CollectionViewDataSource<ProductsCollectionCellViewModel> { get }
   var cash: Cash? { get }
+  var delegate: HomeViewModelDelegate? { set get }
   
   func fetchProducts(completion: @escaping (Result<Void, Error>) -> Void)
+  func didSelectSpotligh(at indexPath: IndexPath)
+  func didSelectProduct(at indexPath: IndexPath)
+  func didSelectCash()
 }
 
 class HomeViewModel {
   let spotlightCollectionDataSource: CollectionViewDataSource<SpotlightCollectionCellViewModel> = .make(for: [])
   let productsCollectionDataSource: CollectionViewDataSource<ProductsCollectionCellViewModel> = .make(for: [])
   var cash: Cash?
+  var delegate: HomeViewModelDelegate?
 }
 
 extension HomeViewModel: HomeViewModelProtocol {
@@ -43,7 +52,26 @@ extension HomeViewModel: HomeViewModelProtocol {
     }
   }
   
-//  func get
+  func didSelectSpotligh(at indexPath: IndexPath) {
+    let cell = spotlightCollectionDataSource.models[indexPath.row]
+    delegate?.openDetail(.init(title: cell.spotlight.name,
+                               bannerURL: cell.spotlight.bannerURL,
+                               description: cell.spotlight.description))
+  }
+  
+  func didSelectProduct(at indexPath: IndexPath) {
+    let cell = productsCollectionDataSource.models[indexPath.row]
+    delegate?.openDetail(.init(title: cell.product.name,
+                               bannerURL: cell.product.imageURL,
+                               description: cell.product.description))
+  }
+  
+  func didSelectCash() {
+    guard let cash else { return }
+    delegate?.openDetail(.init(title: cash.title,
+                               bannerURL: cash.bannerURL,
+                               description: cash.description))
+  }
 }
 
 extension CollectionViewDataSource where Model == SpotlightCollectionCellViewModel {

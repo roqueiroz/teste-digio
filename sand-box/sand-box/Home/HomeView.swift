@@ -50,8 +50,9 @@ final class HomeView: BaseScrollView {
     return collectionView
   }()
   
-  private let cashView: UIView = {
+  let cashView: UIView = {
     let view = UIView(frame: .zero)
+    view.isUserInteractionEnabled = true
     return view
   }()
   private let cashTitleLabel: UILabel = {
@@ -71,6 +72,7 @@ final class HomeView: BaseScrollView {
     view.isUserInteractionEnabled = true
     return view
   }()
+  
   private let productTitleLabel: UILabel = {
     let label = UILabel()
     label.text = "Produtos"
@@ -78,6 +80,7 @@ final class HomeView: BaseScrollView {
     label.textColor = UIColor(named: "main")
     return label
   }()
+  
   lazy var productsCollectionView: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
     layout.scrollDirection = .horizontal
@@ -107,7 +110,6 @@ final class HomeView: BaseScrollView {
 
 private extension HomeView {
   func addComponents() {
-    
     headerView.addSubviews([profileImageView,
                             profileLabel],
                            enableConstraints: true)
@@ -125,10 +127,12 @@ private extension HomeView {
                                cashView,
                                productsView],
                               enableConstraints: true)
+    
     viewLoader.addSubview(spinner, enableConstraints: true)
+    
     contentView.addSubviews([containerView,
-                           viewLoader],
-                           enableConstraints: true)
+                             viewLoader],
+                            enableConstraints: true)
   }
   
   func setupExtraConfigurations() {
@@ -185,7 +189,6 @@ private extension HomeView {
       
       spinner.centerXAnchor.constraint(equalTo: viewLoader.centerXAnchor),
       spinner.centerYAnchor.constraint(equalTo: viewLoader.centerYAnchor)
-      
     ])
   }
 }
@@ -194,6 +197,7 @@ extension HomeView {
   func showLoader(_ show: Bool) {
     containerView.isHidden = show
     viewLoader.isHidden = !show
+    
     if show {
       spinner.startAnimating()
     } else {
@@ -202,21 +206,28 @@ extension HomeView {
   }
   
   func setCashTitle(_ title: String) {
-    let att1 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 22),
+    let attMain = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 22),
                 NSAttributedString.Key.foregroundColor : UIColor(named: "main")]
     
-    let att2 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 22),
+    let attSecondary = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 22),
                 NSAttributedString.Key.foregroundColor : UIColor(named: "secondary")]
     
     let split = title.components(separatedBy: " ")
+    let main = split.count == 1 ? split[0] : "digio"
+    let secondary = split.count == 1 ? split[1] : "cash"
     
-    let attributedString1 = NSMutableAttributedString(string: split[0], attributes: att1 as [NSAttributedString.Key : Any])
-    let space = NSMutableAttributedString(string: " ", attributes: att1 as [NSAttributedString.Key : Any])
-    let attributedString2 = NSMutableAttributedString(string: split[1], attributes: att2 as [NSAttributedString.Key : Any])
+    let stylizedTitleMain = NSMutableAttributedString(string: main,
+                                                      attributes: attMain as [NSAttributedString.Key : Any])
     
-    attributedString1.append(space)
-    attributedString1.append(attributedString2)
-    self.cashTitleLabel.attributedText = attributedString1
+    let space = NSMutableAttributedString(string: " ",
+                                          attributes: attMain as [NSAttributedString.Key : Any])
+    
+    let stylizedTitleSecondary = NSMutableAttributedString(string: secondary,
+                                                      attributes: attSecondary as [NSAttributedString.Key : Any])
+    
+    stylizedTitleMain.append(space)
+    stylizedTitleMain.append(stylizedTitleSecondary)
+    self.cashTitleLabel.attributedText = stylizedTitleMain
   }
   
   func setCashBanner(_ path: String) {

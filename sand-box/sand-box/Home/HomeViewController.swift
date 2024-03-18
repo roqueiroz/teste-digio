@@ -25,6 +25,11 @@ final class HomeViewController: BaseScrollViewController<HomeView> {
     fetchProducts()
     setupBinds()
   }
+  
+  @objc
+  private func didTapView() {
+    viewModel.didSelectCash()
+  }
 }
 
 private extension HomeViewController {
@@ -63,10 +68,14 @@ private extension HomeViewController {
   }
   
   func setupBinds() {
+    self.viewModel.delegate = self
     self.baseView.spotlightCollectionView.dataSource = viewModel.spotlightCollectionDataSource
     self.baseView.spotlightCollectionView.delegate = self
     self.baseView.productsCollectionView.dataSource = viewModel.productsCollectionDataSource
     self.baseView.productsCollectionView.delegate = self
+    let tap = UITapGestureRecognizer(target: self,
+                                     action: #selector(didTapView))
+    self.baseView.cashView.addGestureRecognizer(tap)
   }
 }
 
@@ -80,6 +89,21 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
   }
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    if collectionView == baseView.spotlightCollectionView {
+      viewModel.didSelectSpotligh(at: indexPath)
+    }
     
+    if collectionView == baseView.productsCollectionView {
+      viewModel.didSelectProduct(at: indexPath)
+    }
+  }
+}
+
+extension HomeViewController: HomeViewModelDelegate {
+  func openDetail(_ detailModel: DetailModel) {
+    let detailViewModel = DetailViewModel(detailModel: detailModel)
+    let modal = DetailViewController(viewModel: detailViewModel)
+    modal.modalPresentationStyle = .formSheet
+    self.present(modal, animated: true)
   }
 }

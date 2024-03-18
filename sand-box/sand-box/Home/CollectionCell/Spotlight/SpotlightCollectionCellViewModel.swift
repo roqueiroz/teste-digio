@@ -9,7 +9,7 @@ import Foundation
 
 class SpotlightCollectionCellViewModel {
  
-  private let spotlight: Spotlight
+  let spotlight: Spotlight
   
   init(_ spotlight: Spotlight) {
     self.spotlight = spotlight

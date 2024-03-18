@@ -46,6 +46,16 @@
 		30F9D3702BA4CAC500E0FF7B /* Extension+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D36E2BA4CAC500E0FF7B /* Extension+NSLayoutConstraint.swift */; };
 		30F9D3722BA4D27200E0FF7B /* ErroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3712BA4D27200E0FF7B /* ErroView.swift */; };
 		30F9D3732BA4D27200E0FF7B /* ErroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3712BA4D27200E0FF7B /* ErroView.swift */; };
+		30F9D3762BA5148C00E0FF7B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3752BA5148C00E0FF7B /* DetailViewController.swift */; };
+		30F9D3772BA5148C00E0FF7B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3752BA5148C00E0FF7B /* DetailViewController.swift */; };
+		30F9D3792BA514B600E0FF7B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3782BA514B600E0FF7B /* DetailView.swift */; };
+		30F9D37A2BA514B600E0FF7B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3782BA514B600E0FF7B /* DetailView.swift */; };
+		30F9D37C2BA5157D00E0FF7B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D37B2BA5157D00E0FF7B /* BaseViewController.swift */; };
+		30F9D37D2BA5157D00E0FF7B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D37B2BA5157D00E0FF7B /* BaseViewController.swift */; };
+		30F9D37F2BA7E1C500E0FF7B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D37E2BA7E1C500E0FF7B /* DetailViewModel.swift */; };
+		30F9D3802BA7E1C500E0FF7B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D37E2BA7E1C500E0FF7B /* DetailViewModel.swift */; };
+		30F9D3822BA7E25600E0FF7B /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3812BA7E25600E0FF7B /* DetailModel.swift */; };
+		30F9D3832BA7E25600E0FF7B /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3812BA7E25600E0FF7B /* DetailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +103,11 @@
 		30F9D36B2BA4CA4900E0FF7B /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 		30F9D36E2BA4CAC500E0FF7B /* Extension+NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NSLayoutConstraint.swift"; sourceTree = "<group>"; };
 		30F9D3712BA4D27200E0FF7B /* ErroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErroView.swift; sourceTree = "<group>"; };
+		30F9D3752BA5148C00E0FF7B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		30F9D3782BA514B600E0FF7B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		30F9D37B2BA5157D00E0FF7B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		30F9D37E2BA7E1C500E0FF7B /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		30F9D3812BA7E25600E0FF7B /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +158,7 @@
 		30F9D2E92BA2855A00E0FF7B /* sand-box */ = {
 			isa = PBXGroup;
 			children = (
+				30F9D3742BA5145400E0FF7B /* Details */,
 				30F9D34D2BA3E5AB00E0FF7B /* Essencials */,
 				30F9D3432BA3C4E900E0FF7B /* Home */,
 				30F9D33B2BA37F6600E0FF7B /* Service */,
@@ -218,6 +234,7 @@
 				30F9D34E2BA3E5B600E0FF7B /* BaseView.swift */,
 				30F9D3512BA3E65500E0FF7B /* BaseScrollViewController.swift */,
 				30F9D3712BA4D27200E0FF7B /* ErroView.swift */,
+				30F9D37B2BA5157D00E0FF7B /* BaseViewController.swift */,
 			);
 			path = Essencials;
 			sourceTree = "<group>";
@@ -263,6 +280,17 @@
 				30F9D32B2BA3336700E0FF7B /* Models.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		30F9D3742BA5145400E0FF7B /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				30F9D3752BA5148C00E0FF7B /* DetailViewController.swift */,
+				30F9D3782BA514B600E0FF7B /* DetailView.swift */,
+				30F9D37E2BA7E1C500E0FF7B /* DetailViewModel.swift */,
+				30F9D3812BA7E25600E0FF7B /* DetailModel.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,14 +427,19 @@
 				30F9D3482BA3C85C00E0FF7B /* HomeView.swift in Sources */,
 				30F9D36C2BA4CA4900E0FF7B /* Extension+UIView.swift in Sources */,
 				30F9D3522BA3E65500E0FF7B /* BaseScrollViewController.swift in Sources */,
+				30F9D3822BA7E25600E0FF7B /* DetailModel.swift in Sources */,
 				30F9D3602BA4982600E0FF7B /* HomeViewModel.swift in Sources */,
+				30F9D37C2BA5157D00E0FF7B /* BaseViewController.swift in Sources */,
 				30F9D3392BA3769D00E0FF7B /* Extension+UIImageView.swift in Sources */,
 				30F9D35D2BA4962000E0FF7B /* CollectionViewDataSource.swift in Sources */,
 				30F9D3412BA3804100E0FF7B /* ApiManager.swift in Sources */,
+				30F9D37F2BA7E1C500E0FF7B /* DetailViewModel.swift in Sources */,
 				30F9D2EB2BA2855A00E0FF7B /* AppDelegate.swift in Sources */,
 				30F9D3592BA4943600E0FF7B /* SpotlightCollectionCellViewModel.swift in Sources */,
+				30F9D3762BA5148C00E0FF7B /* DetailViewController.swift in Sources */,
 				30F9D3682BA4BC6E00E0FF7B /* ProductsCollectionCellViewModel.swift in Sources */,
 				30F9D3652BA4BAC600E0FF7B /* ProductsCollectionCellView.swift in Sources */,
+				30F9D3792BA514B600E0FF7B /* DetailView.swift in Sources */,
 				30F9D2ED2BA2855A00E0FF7B /* SceneDelegate.swift in Sources */,
 				30F9D32C2BA3336700E0FF7B /* Models.swift in Sources */,
 				30F9D34F2BA3E5B600E0FF7B /* BaseView.swift in Sources */,
@@ -425,17 +458,22 @@
 				30F9D3732BA4D27200E0FF7B /* ErroView.swift in Sources */,
 				30F9D36D2BA4CA4900E0FF7B /* Extension+UIView.swift in Sources */,
 				30F9D35E2BA4962000E0FF7B /* CollectionViewDataSource.swift in Sources */,
+				30F9D37D2BA5157D00E0FF7B /* BaseViewController.swift in Sources */,
 				30F9D3502BA3E5B600E0FF7B /* BaseView.swift in Sources */,
 				30F9D3572BA4825500E0FF7B /* SpotlightCollectionCellView.swift in Sources */,
 				30F9D3422BA3804100E0FF7B /* ApiManager.swift in Sources */,
 				30F9D3692BA4BC6E00E0FF7B /* ProductsCollectionCellViewModel.swift in Sources */,
+				30F9D3772BA5148C00E0FF7B /* DetailViewController.swift in Sources */,
 				30F9D3532BA3E65500E0FF7B /* BaseScrollViewController.swift in Sources */,
 				30F9D35A2BA4943600E0FF7B /* SpotlightCollectionCellViewModel.swift in Sources */,
 				30F9D3702BA4CAC500E0FF7B /* Extension+NSLayoutConstraint.swift in Sources */,
 				30F9D33A2BA3769D00E0FF7B /* Extension+UIImageView.swift in Sources */,
 				30F9D3022BA2855B00E0FF7B /* sand_boxTests.swift in Sources */,
+				30F9D3802BA7E1C500E0FF7B /* DetailViewModel.swift in Sources */,
 				30F9D3462BA3C83900E0FF7B /* HomeViewController.swift in Sources */,
+				30F9D37A2BA514B600E0FF7B /* DetailView.swift in Sources */,
 				30F9D32D2BA3336700E0FF7B /* Models.swift in Sources */,
+				30F9D3832BA7E25600E0FF7B /* DetailModel.swift in Sources */,
 				30F9D3492BA3C85C00E0FF7B /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

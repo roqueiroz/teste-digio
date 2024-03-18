@@ -30,7 +30,6 @@ final class SpotlightCollectionCellView: BaseCollectionViewCell {
       bannerImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 4),
     ])
   }
-  
 }
 
 extension SpotlightCollectionCellView {
