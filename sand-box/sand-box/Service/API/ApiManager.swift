@@ -14,13 +14,15 @@ enum DataError: Error {
 }
 
 class APIManager {
-  static let shared = APIManager()
-  private init() { }
+  static let shared = APIManager(url: "https://7hgi9vtkdc.execute-api.sa-east-1.amazonaws.com/sandbox/products")
+  var url: URL
   
-  let url = URL(string: "https://7hgi9vtkdc.execute-api.sa-east-1.amazonaws.com/sandbox/products")
+  private init(url: String) {
+    self.url = URL(string: url) ?? URL(fileURLWithPath: "")
+  }
   
   func fetchData(completion: @escaping (Result<ProductData, Error>) -> Void) {
-    URLSession.shared.dataTask(with: url!) { data, response, error in
+    URLSession.shared.dataTask(with: url) { data, response, error in
       guard let data else {
         completion(.failure(DataError.invalidData))
         return
