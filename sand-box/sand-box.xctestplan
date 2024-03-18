@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "1576BC76-34E2-444B-94A1-481D1766970F",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:sand-box.xcodeproj",
+      "identifier" : "30F9D2E62BA2855A00E0FF7B",
+      "name" : "sand-box"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:sand-box.xcodeproj",
+        "identifier" : "30F9D2FC2BA2855B00E0FF7B",
+        "name" : "sand-boxTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:sand-box.xcodeproj",
+        "identifier" : "30F9D3062BA2855B00E0FF7B",
+        "name" : "sand-boxUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

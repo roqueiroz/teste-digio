@@ -116,6 +116,7 @@
 		30F9D3892BA88C3F00E0FF7B /* MockProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductData.swift; sourceTree = "<group>"; };
 		30F9D38B2BA88CA200E0FF7B /* ApiManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerTests.swift; sourceTree = "<group>"; };
 		30F9D3942BA8E12000E0FF7B /* DetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelTests.swift; sourceTree = "<group>"; };
+		30F9D3962BA8FB0400E0FF7B /* sand-box.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "sand-box.xctestplan"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +147,7 @@
 		30F9D2DE2BA2855A00E0FF7B = {
 			isa = PBXGroup;
 			children = (
+				30F9D3962BA8FB0400E0FF7B /* sand-box.xctestplan */,
 				30F9D2E92BA2855A00E0FF7B /* sand-box */,
 				30F9D3002BA2855B00E0FF7B /* sand-boxTests */,
 				30F9D30A2BA2855B00E0FF7B /* sand-boxUITests */,
@@ -759,9 +761,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "rqueiroz.sand-boxTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sand-box.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sand-box";
 			};
 			name = Debug;
@@ -779,9 +784,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "rqueiroz.sand-boxTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sand-box.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sand-box";
 			};
 			name = Release;
