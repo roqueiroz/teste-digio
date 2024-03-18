@@ -9,28 +9,29 @@ import XCTest
 
 final class HomeViewModelTests: XCTestCase {
     func testFetchProducts_WithSuccess() {
-        //given
-        let expectation = XCTestExpectation(description: "Data fetched successfully")
-        let sut = HomeViewModel()
-        
-        //when
-        DispatchQueue.main.async {
-            sut.fetchProducts { result in
-                switch result {
-                case .success():
-                    expectation.fulfill()
-                case .failure(let failure):
-                    expectation.fulfill()
-                    XCTFail("\(failure)")
-                }
-            }
-        }
-        
-        //then
-        wait(for: [expectation], timeout: 5.0)
-        XCTAssertNotNil(sut.cash)
-        XCTAssertNotNil(sut.productsCollectionDataSource.models)
-        XCTAssertNotNil(sut.spotlightCollectionDataSource.models)
+      //given
+      let expectation = XCTestExpectation(description: "Data fetched successfully")
+      let sut = HomeViewModel()
+      
+      //when
+      DispatchQueue.main.async {
+          sut.fetchProducts { result in
+              switch result {
+              case .success():
+                  expectation.fulfill()
+              case .failure(let failure):
+                  expectation.fulfill()
+                  XCTFail("\(failure)")
+              }
+          }
+      }
+      
+      //then
+      wait(for: [expectation], timeout: 5.0)
+      XCTAssertNotNil(sut.cash!)
+      XCTAssertNotNil(sut.productsCollectionDataSource.models)
+      XCTAssertNotNil(sut.spotlightCollectionDataSource.models)
+
     }
     
     func testFetchProducts_WithFailure() {

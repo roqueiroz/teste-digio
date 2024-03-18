@@ -28,7 +28,7 @@ final class ApiManagerTests: XCTestCase {
       
       //then
       wait(for: [expectation], timeout: 5.0)
-      XCTAssertNotNil(product, "should be filled on the fetch data")
+      XCTAssertNotNil(product!, "should be filled on the fetch data")
       XCTAssertNotNil(product?.cash)
       XCTAssertNotNil(product?.products)
       XCTAssertNotNil(product?.spotlights)

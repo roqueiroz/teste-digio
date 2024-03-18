@@ -59,6 +59,7 @@
 		30F9D3882BA88C0A00E0FF7B /* MockApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3872BA88C0A00E0FF7B /* MockApiManager.swift */; };
 		30F9D38A2BA88C3F00E0FF7B /* MockProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3892BA88C3F00E0FF7B /* MockProductData.swift */; };
 		30F9D38C2BA88CA200E0FF7B /* ApiManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D38B2BA88CA200E0FF7B /* ApiManagerTests.swift */; };
+		30F9D3952BA8E12000E0FF7B /* DetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9D3942BA8E12000E0FF7B /* DetailViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		30F9D3872BA88C0A00E0FF7B /* MockApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiManager.swift; sourceTree = "<group>"; };
 		30F9D3892BA88C3F00E0FF7B /* MockProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductData.swift; sourceTree = "<group>"; };
 		30F9D38B2BA88CA200E0FF7B /* ApiManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerTests.swift; sourceTree = "<group>"; };
+		30F9D3942BA8E12000E0FF7B /* DetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,8 +182,8 @@
 		30F9D3002BA2855B00E0FF7B /* sand-boxTests */ = {
 			isa = PBXGroup;
 			children = (
-				30F9D3902BA88D5100E0FF7B /* Api */,
-				30F9D38D2BA88CCE00E0FF7B /* Home */,
+				30F9D3932BA8E0F400E0FF7B /* Tests */,
+				30F9D3922BA8E0EC00E0FF7B /* Mock */,
 			);
 			path = "sand-boxTests";
 			sourceTree = "<group>";
@@ -303,27 +305,9 @@
 		30F9D38D2BA88CCE00E0FF7B /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				30F9D38F2BA88CE800E0FF7B /* Mock */,
-				30F9D38E2BA88CDD00E0FF7B /* Tests */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		30F9D38E2BA88CDD00E0FF7B /* Tests */ = {
-			isa = PBXGroup;
-			children = (
 				30F9D3842BA88A1E00E0FF7B /* HomeViewModelTests.swift */,
 			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		30F9D38F2BA88CE800E0FF7B /* Mock */ = {
-			isa = PBXGroup;
-			children = (
-				30F9D3872BA88C0A00E0FF7B /* MockApiManager.swift */,
-				30F9D3892BA88C3F00E0FF7B /* MockProductData.swift */,
-			);
-			path = Mock;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		30F9D3902BA88D5100E0FF7B /* Api */ = {
@@ -332,6 +316,33 @@
 				30F9D38B2BA88CA200E0FF7B /* ApiManagerTests.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		30F9D3912BA8E0E300E0FF7B /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				30F9D3942BA8E12000E0FF7B /* DetailViewModelTests.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		30F9D3922BA8E0EC00E0FF7B /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				30F9D3872BA88C0A00E0FF7B /* MockApiManager.swift */,
+				30F9D3892BA88C3F00E0FF7B /* MockProductData.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		30F9D3932BA8E0F400E0FF7B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				30F9D3912BA8E0E300E0FF7B /* Details */,
+				30F9D3902BA88D5100E0FF7B /* Api */,
+				30F9D38D2BA88CCE00E0FF7B /* Home */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,6 +524,7 @@
 				30F9D3702BA4CAC500E0FF7B /* Extension+NSLayoutConstraint.swift in Sources */,
 				30F9D33A2BA3769D00E0FF7B /* Extension+UIImageView.swift in Sources */,
 				30F9D3802BA7E1C500E0FF7B /* DetailViewModel.swift in Sources */,
+				30F9D3952BA8E12000E0FF7B /* DetailViewModelTests.swift in Sources */,
 				30F9D3462BA3C83900E0FF7B /* HomeViewController.swift in Sources */,
 				30F9D37A2BA514B600E0FF7B /* DetailView.swift in Sources */,
 				30F9D32D2BA3336700E0FF7B /* Models.swift in Sources */,
@@ -686,6 +698,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -716,6 +729,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -19,7 +19,12 @@ final class HomeView: BaseScrollView {
   }()
   
   private lazy var spinner: UIActivityIndicatorView = {
-    let activityView = UIActivityIndicatorView(style: .large)
+    let activityView = UIActivityIndicatorView()
+    if #available(iOS 13.0, *) {
+      activityView.style = .large
+    } else {
+      activityView.style = .whiteLarge
+    }
     activityView.center = viewLoader.center
     activityView.color = UIColor(named: "main")
     return activityView
@@ -27,7 +32,11 @@ final class HomeView: BaseScrollView {
   
   private let profileImageView: UIImageView = {
     let imageView = UIImageView()
-    imageView.image = UIImage(systemName: "person.circle")
+    if #available(iOS 13.0, *) {
+      imageView.image = UIImage(systemName: "person.circle")
+    } else {
+      imageView.image = UIImage(named: "person.circle.jpg")
+    }
     return imageView
   }()
   

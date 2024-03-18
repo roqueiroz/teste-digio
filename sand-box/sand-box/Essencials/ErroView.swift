@@ -20,7 +20,11 @@ class ErroView: UIView {
   }()
   var errorImageView: UIImageView = {
     let imageView = UIImageView()
-    imageView.image = UIImage(systemName: "gearshape.2")
+    if #available(iOS 13.0, *) {
+      imageView.image = UIImage(systemName: "gearshape.2")
+    } else {
+      imageView.image = UIImage(named: "gearshape.2.jpg")
+    }
     imageView.tintColor = UIColor(named: "main")
     return imageView
   }()
