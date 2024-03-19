@@ -1,10 +1,10 @@
 # Projeto sandbox
 
 * **Sobre Arquitetura**
-  
 Esse projeto foi desenvolvimento utilizando arquitetura MVVM, visando a separação de responsabilidade e uma possivel modolização caso necessario.
 
 * Sobre o desenvolvimento
+  
 Foi criado algumas extension e classes "base" para facilitar o desenvolvimento de telas na reutilização de codigo/componente. 
 
 * Sobre a camada de Service
