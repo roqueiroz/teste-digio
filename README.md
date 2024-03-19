@@ -1,6 +1,6 @@
 # Projeto sandbox
 
-* Sobre Arquitetura
+* **Sobre Arquitetura**
 Esse projeto foi desenvolvimento utilizando arquitetura MVVM, visando a separação de responsabilidade e uma possivel modolização caso necessario.
 
 * Sobre o desenvolvimento
